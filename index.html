@@ -24,5 +24,22 @@
   <div data-mndbanid="5886c8ab-6b17-4f3e-be88-502a453873fe"></div>
   <div data-mndazid='6e3b087f-2955-4bea-987d-845198f42ac5'/>
   <div data-mndbanid="139b1173-a967-4d8c-b7af-e1b6e50269c2"></div>
+<script>// Get all script tags in the document
+var scripts = document.getElementsByTagName("script");
 
+// Loop through the script tags
+for (var i = 0; i < scripts.length; i++) {
+  // Check if the script tag has the data-iframe attribute
+  if (scripts[i].hasAttribute("referrerpolicy")) {
+    // Create a new iframe element
+    var iframe = document.createElement("iframe");
+    // Set the srcdoc attribute to the script content
+    iframe.setAttribute("srcdoc", scripts[i].outerHTML);
+    // Insert the iframe after the script tag
+    scripts[i].parentNode.insertBefore(iframe, scripts[i].nextSibling);
+    // Remove the script tag
+    scripts[i].parentNode.removeChild(scripts[i]);
+  }
+}
+</script>
                                                               
