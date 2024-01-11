@@ -25,6 +25,19 @@
   <div data-mndazid='6e3b087f-2955-4bea-987d-845198f42ac5'/>
   <div data-mndbanid="139b1173-a967-4d8c-b7af-e1b6e50269c2"></div>
 <script defer>
+
+ $(document).ready(function () {
+
+  window.addEventListener("load", function () {
+  // Use setTimeout to delay the execution of loadScript by 2000 milliseconds (2 seconds)
+  setTimeout(loadScript, 2000);
+});
+
+  
+
+ });
+
+ function loadScript() {
    // Get all script tags in the document
 var scripts = document.getElementsByTagName("script");
 
@@ -42,5 +55,6 @@ for (var i = 0; i < scripts.length; i++) {
     scripts[i].parentNode.removeChild(scripts[i]);
   }
 }
+ }
 </script>
                                                               
