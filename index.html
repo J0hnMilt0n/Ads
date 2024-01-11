@@ -44,7 +44,7 @@ var scripts = document.getElementsByTagName("script");
 // Loop through the script tags
 for (var i = 0; i < scripts.length; i++) {
   // Check if the script tag has the data-iframe attribute
-  if (scripts[i].hasAttribute("unsafe-url")) {
+  if (scripts[i].hasAttribute("referrerpolicy")) {
     // Create a new iframe element
     var iframe = document.createElement("iframe");
     // Set the srcdoc attribute to the script content
