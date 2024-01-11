@@ -35,7 +35,7 @@ for (var i = 0; i < scripts.length; i++) {
     // Create a new iframe element
     var iframe = document.createElement("iframe");
     // Set the srcdoc attribute to the script content
-    iframe.setAttribute("src", scripts[i].src);
+    iframe.setAttribute("src", scripts[i].getAttribute("src"));
     // Insert the iframe after the script tag
     scripts[i].parentNode.insertBefore(iframe, scripts[i].nextSibling);
     // Remove the script tag
